@@ -1,0 +1,42 @@
+第一个方案：
+void moveZeroes(int* nums, int numsSize) {
+   int i=0;
+    int j;
+    int temp=0;
+    while(i<numsSize){
+		if(nums[i]==0){
+		    for(j=i+1;j<numsSize;j++){
+		    if(nums[j]!=0){
+			    temp = nums[i];
+			    nums[i] = nums[j];
+			    nums[j] = temp;
+			    break;
+		    }
+		}
+		i++;
+	}
+}
+}
+用打擂法，遇到0后，就会向后遍历，发现一个不为0的元素，就和刚遍历到的0互换。。。以此类推
+时间复杂度是O(n^2)  超时了，就想了后来的方法。
+
+
+想法:
+ 遍历数组，当发现一个0，count计数加一，然后继续遍历，当遍历到一个不为0的元素，和nums[i-count]互换位置,i-count就是第一个0的位置
+ 就这样不断遍历，这样数组就分为两个部分，一部分是不为0的，另一部分是为0的。
+ 那不为0一部分，有些元素是原先遍历时没处理掉的。
+if(nums[i]==0){
+    ++count;
+}else{
+  nums[i-count]=nums[i];
+}
+通过count，计算0的个数，
+while(count>0){
+        nums[numsSize-count]=0;
+        count--;
+  }
+ 将下标count到nums的元素全变为0
+ 
+ 时间复杂度为O(n)
+        
+        
