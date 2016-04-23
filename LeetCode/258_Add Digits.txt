@@ -1,1 +1,37 @@
+Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
 
+For example:
+
+Given num = 38, the process is like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
+
+Follow up:
+Could you do it without any loop/recursion in O(1) runtime?
+
+解题：
+    采用递归的方法
+  int addDigits(int num) {
+	  while(add(num)>=10){
+		  return addDigits(add(num));
+	  }
+	  return add(num);
+  }
+
+  int add(int num){
+	  int a;
+	  if(num>0){
+		  a = num - (num/10)*10; 
+		  return a + add(num/10);
+	  }else{
+		  return 0;
+	  }
+  }
+  判断num是否为个位数，如果为个位数，返回该数。
+  如果过num>10，num不为一位数，开始递归。
+  a = num - (num/10)*10; 
+  a为num的个位 每次递归 num都除以10 直到num/10为个位 然后相加 返回本次递归的和
+  判断 while(add(num)>=10)  如果第一次递归返回的和不为个位数 进行下一次递归
+  
+  
+  
+  
+  
