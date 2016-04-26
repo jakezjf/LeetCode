@@ -12,3 +12,4 @@ void deleteNode(struct ListNode* node) {
     node->next = node1->next;
     free(node1);
 }
+
