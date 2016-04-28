@@ -13,3 +13,5 @@ void deleteNode(struct ListNode* node) {
     free(node1);
 }
 
+构造一个新的结点，将node的下一个结点的值赋给新结点
+释放构造的结点node
