@@ -6,4 +6,5 @@ Given nums = [0, 1, 3] return 2.
 Note:
 Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
 
-题目可以得到，有n个数其中一个数缺失，使用for循环遍历，定义sum初始为0；通过数组下标和数组的值相等，假设在i位置缺失，sum = -（n-i）,通过和数组长度相加，可以得出是第几个位置缺失。
+题目可以得到，有n个数其中一个数缺失，使用for循环遍历，定义sum初始为0；通过数组下标和数组的值相等,判断数是否缺失，
+假设在i位置缺失，sum = -（n-i）,通过和数组长度相加，可以得出是第几个位置缺失。
