@@ -1,0 +1,13 @@
+Given an array of integers, find if the array contains any duplicates. 
+Your function should return true if any value appears at least twice in the array,
+and it should return false if every element is distinct.
+
+给出一个数组，判断数组中是否存在有重复出现的数，有的话返回true，否则返回false
+解法：用两个for循环遍历数组，
+      第i个数组和第i个以后的数组都进行一次比较，发现相同，就返回true
+      如果for循环便利结束，那么则表示没有相同的元素存在，返回false
+      
+      时间复杂度为O(n^2)
+      
+      
+
