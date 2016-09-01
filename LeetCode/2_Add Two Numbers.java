@@ -13,6 +13,8 @@
  *     ListNode next;
  *     ListNode(int x) { val = x; }
  * }
+ * 
+ * 13ms
  */
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
