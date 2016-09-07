@@ -21,6 +21,26 @@
 
 public class Solution {
     public boolean isSubsequence(String s, String t) {
+      int i = 0;
+      int j = 0;
+      while(i<s.length() && j<t.length()){
+          if(s.charAt(i)==t.charAt(j)){
+              i++;
+          }
+          j++;
+      }
+      if(i==s.length()){
+          return true;
+      }
+      return false;
+    }
+} 
+//41ms
+
+
+
+public class Solution {
+    public boolean isSubsequence(String s, String t) {
         int arr[] =new int[255];
         int arr1[] = new int[255];
         if(s.equals("acb")==true && t.equals("ahbgdc")==true){
@@ -45,3 +65,4 @@ public class Solution {
         return true;
     }
 }
+//51ms
