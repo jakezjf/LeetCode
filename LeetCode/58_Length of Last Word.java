@@ -25,4 +25,21 @@ public class Solution {
         }
         return temp;
     }
+    
+     public int lengthOfLastWord1(String s) {
+        int j = 0;
+        boolean flag = true;
+        for(int i = s.length()-1;i>=0  ;i--){
+            if(s.charAt(i)==' ' && flag == false){
+                break;
+            }
+            if (s.charAt(i)!=' '){
+                flag = false;
+                j++;
+            }
+        }
+        return j;
+    }
 }
+
+
