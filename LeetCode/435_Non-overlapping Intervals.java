@@ -65,5 +65,5 @@ public class Solution {
 首先对数组按照end的大小进行排序，初始化end = end最小的那一个，就是第一个数组元素。end和下一个数组元素start进行对比，当start
 大于等于end，说明该元素没有重叠，加一，并将end设为这个元素的end。当发现下一个元素的start小于end时，跳过它。最后数组长度-count，就是重叠的个数+1.
 
-
+*/
 
