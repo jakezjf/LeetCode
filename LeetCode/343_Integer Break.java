@@ -20,3 +20,21 @@ public class Solution {
    return dp[n];
  }
 }
+
+
+public class Solution {
+    public int integerBreak(int n) {
+        if(n == 2){
+            return 1;
+        }
+        if(n == 3){
+            return 2;
+        }
+        int count = 1;
+        while(n>4){
+            count = count * 3;
+            n = n-3;
+        }
+        return count*n;
+    }
+}
